@@ -89,5 +89,19 @@ namespace Xxx.Interview.Instructions.Tests
             // assert
             Assert.That(testLogger.Results, Is.Not.Empty);
         }
+
+        [Test]
+        public void instruction_example()
+        {
+            // arrange
+            var @is = new InstructionSet(_operatorFactory.Object, _parser);
+            @is.LoadFromFile("data/instruction_example.txt");
+
+            // act
+            var result = @is.Execute(0);
+
+            // assert
+            Assert.That(result, Is.EqualTo(4));
+        }
     }
 }

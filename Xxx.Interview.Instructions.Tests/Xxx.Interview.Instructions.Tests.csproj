@@ -17,6 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Data\instruction_example.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Data\subtract_negative.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
