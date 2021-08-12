@@ -10,6 +10,8 @@ This is the solution to an interview coding test I wrote for a contract I never 
 
 Included below is the spec followed by my results, but the major thing to note is I built this in .Net 5.0 not .Net 4.6.1 or less - so i guess I failed already :)
 
+What the instructions doesn't tell you is to use the supplied input.txt data file and execute instruction 100:
+
 **Instructions**
 
 Your challenge is to write highly performant C# code that can correctly evaluate a list of instructions, the code should give the ability to be able to swap instruction format (label: instruction type items), should we wish to, for another unknown/undisclosed format along with the ability to support adding new or changing the supported instruction types.
