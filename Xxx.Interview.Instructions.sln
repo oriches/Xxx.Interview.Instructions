@@ -3,14 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31229.75
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xxx.Interview.Instructions", "Xxx.Interview.Instructions\Xxx.Interview.Instructions.csproj", "{9FC0BF1C-6345-4CC1-A428-7742C504EDFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xxx.Interview.Instructions", "Xxx.Interview.Instructions\Xxx.Interview.Instructions.csproj", "{9FC0BF1C-6345-4CC1-A428-7742C504EDFD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{90E516E7-4264-46FE-8AA2-546D97D82E51}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		instructions.txt = instructions.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xxx.Interview.Instructions.Tests", "Xxx.Interview.Instructions.Tests\Xxx.Interview.Instructions.Tests.csproj", "{B0249C53-9CBF-4A93-AAF6-5E8A692DAB83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xxx.Interview.Instructions.Tests", "Xxx.Interview.Instructions.Tests\Xxx.Interview.Instructions.Tests.csproj", "{B0249C53-9CBF-4A93-AAF6-5E8A692DAB83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
