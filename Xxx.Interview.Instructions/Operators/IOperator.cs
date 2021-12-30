@@ -1,11 +1,10 @@
 ﻿using System;
 
-namespace Xxx.Interview.Instructions.Operators
-{
-    public interface IOperator
-    {
-        string Name { get; }
+namespace Xxx.Interview.Instructions.Operators;
 
-        long Execute(params Func<long>[] operands);
-    }
+public interface IOperator
+{
+    string Name { get; }
+
+    long Execute(params Func<long>[] operands);
 }

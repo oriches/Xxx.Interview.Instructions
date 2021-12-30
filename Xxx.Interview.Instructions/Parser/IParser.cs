@@ -1,7 +1,6 @@
-﻿namespace Xxx.Interview.Instructions.Parser
+﻿namespace Xxx.Interview.Instructions.Parser;
+
+public interface IParser
 {
-    public interface IParser
-    {
-        ParsedLine[] ParseFile(string file);
-    }
+    ParsedLine[] ParseFile(string file);
 }

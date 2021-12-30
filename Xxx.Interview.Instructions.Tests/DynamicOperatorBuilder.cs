@@ -5,13 +5,13 @@ using System.Reflection;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 
-namespace Xxx.Interview.Instructions.Tests
+namespace Xxx.Interview.Instructions.Tests;
+
+public static class DynamicOperatorBuilder
 {
-    public static class DynamicOperatorBuilder
+    public static void CreateDuplicate()
     {
-        public static void CreateDuplicate()
-        {
-            var syntaxTree = CSharpSyntaxTree.ParseText(@"using System;
+        var syntaxTree = CSharpSyntaxTree.ParseText(@"using System;
             using System.Linq;
             using Xxx.Interview.Instructions.Operators;
 
@@ -31,23 +31,22 @@ namespace Xxx.Interview.Instructions.Tests
                 }
             }");
 
-            var references = AppDomain.CurrentDomain.GetAssemblies()
-                .Where(a => !a.IsDynamic)
-                .Select(a => a.Location)
-                .Distinct()
-                .Select(l => MetadataReference.CreateFromFile(l))
-                .ToArray();
+        var references = AppDomain.CurrentDomain.GetAssemblies()
+            .Where(a => !a.IsDynamic)
+            .Select(a => a.Location)
+            .Distinct()
+            .Select(l => MetadataReference.CreateFromFile(l))
+            .ToArray();
 
-            var compilation = CSharpCompilation.Create("Xxx.Interview.Instructions.DynamicOperator", new[] {syntaxTree},
-                references, new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary));
+        var compilation = CSharpCompilation.Create("Xxx.Interview.Instructions.DynamicOperator", new[] { syntaxTree },
+            references, new CSharpCompilationOptions(OutputKind.DynamicallyLinkedLibrary));
 
-            using var ms = new MemoryStream();
-            var result = compilation.Emit(ms);
-            if (result.Success)
-            {
-                ms.Seek(0, SeekOrigin.Begin);
-                Assembly.Load(ms.ToArray());
-            }
+        using var ms = new MemoryStream();
+        var result = compilation.Emit(ms);
+        if (result.Success)
+        {
+            ms.Seek(0, SeekOrigin.Begin);
+            Assembly.Load(ms.ToArray());
         }
     }
 }

@@ -1,7 +1,6 @@
-﻿namespace Xxx.Interview.Instructions.Operators
+﻿namespace Xxx.Interview.Instructions.Operators;
+
+public interface IOperatorFactory
 {
-    public interface IOperatorFactory
-    {
-        IOperator[] Operators { get; }
-    }
+    IOperator[] Operators { get; }
 }

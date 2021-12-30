@@ -1,11 +1,10 @@
-﻿namespace Xxx.Interview.Instructions.Logging
+﻿namespace Xxx.Interview.Instructions.Logging;
+
+public interface ILogger
 {
-    public interface ILogger
-    {
-        void Info();
+    void Info();
 
-        void Info(string message);
+    void Info(string message);
 
-        void Flush();
-    }
+    void Flush();
 }
