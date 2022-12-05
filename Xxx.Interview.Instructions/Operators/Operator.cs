@@ -4,10 +4,7 @@ namespace Xxx.Interview.Instructions.Operators;
 
 public abstract class Operator : IOperator, IEquatable<Operator>
 {
-    protected Operator(string name)
-    {
-        Name = name;
-    }
+    protected Operator(string name) => Name = name;
 
     public bool Equals(Operator other)
     {
@@ -28,18 +25,9 @@ public abstract class Operator : IOperator, IEquatable<Operator>
         return Equals((Operator)obj);
     }
 
-    public override int GetHashCode()
-    {
-        return Name.GetHashCode();
-    }
+    public override int GetHashCode() => Name.GetHashCode();
 
-    public static bool operator ==(Operator left, Operator right)
-    {
-        return Equals(left, right);
-    }
+    public static bool operator ==(Operator left, Operator right) => Equals(left, right);
 
-    public static bool operator !=(Operator left, Operator right)
-    {
-        return !Equals(left, right);
-    }
+    public static bool operator !=(Operator left, Operator right) => !Equals(left, right);
 }

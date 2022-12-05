@@ -8,10 +8,7 @@ public sealed class ConsoleLogger : ILogger
     public static readonly ILogger Instance = new ConsoleLogger();
     private readonly List<string> _messages;
 
-    private ConsoleLogger()
-    {
-        _messages = new List<string>();
-    }
+    private ConsoleLogger() => _messages = new List<string>();
 
     public void Info()
     {

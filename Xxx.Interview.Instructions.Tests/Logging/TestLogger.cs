@@ -5,10 +5,7 @@ namespace Xxx.Interview.Instructions.Tests.Logging;
 
 public sealed class TestLogger : ILogger
 {
-    public TestLogger()
-    {
-        Results = new List<string>();
-    }
+    public TestLogger() => Results = new List<string>();
 
     public List<string> Results { get; }
 

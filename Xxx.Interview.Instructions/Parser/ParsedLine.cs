@@ -26,23 +26,11 @@ public sealed class ParsedLine : IEquatable<ParsedLine>
         return Identifier == other.Identifier;
     }
 
-    public override bool Equals(object obj)
-    {
-        return ReferenceEquals(this, obj) || obj is ParsedLine other && Equals(other);
-    }
+    public override bool Equals(object obj) => ReferenceEquals(this, obj) || (obj is ParsedLine other && Equals(other));
 
-    public override int GetHashCode()
-    {
-        return Identifier.GetHashCode();
-    }
+    public override int GetHashCode() => Identifier.GetHashCode();
 
-    public static bool operator ==(ParsedLine left, ParsedLine right)
-    {
-        return Equals(left, right);
-    }
+    public static bool operator ==(ParsedLine left, ParsedLine right) => Equals(left, right);
 
-    public static bool operator !=(ParsedLine left, ParsedLine right)
-    {
-        return !Equals(left, right);
-    }
+    public static bool operator !=(ParsedLine left, ParsedLine right) => !Equals(left, right);
 }

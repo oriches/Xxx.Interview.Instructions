@@ -29,25 +29,14 @@ public sealed class Instruction : IEquatable<Instruction>
         return Identifier == other.Identifier;
     }
 
-    public override bool Equals(object obj)
-    {
-        return ReferenceEquals(this, obj) || obj is Instruction other && Equals(other);
-    }
+    public override bool Equals(object obj) =>
+        ReferenceEquals(this, obj) || (obj is Instruction other && Equals(other));
 
-    public override int GetHashCode()
-    {
-        return Identifier;
-    }
+    public override int GetHashCode() => Identifier;
 
-    public static bool operator ==(Instruction left, Instruction right)
-    {
-        return Equals(left, right);
-    }
+    public static bool operator ==(Instruction left, Instruction right) => Equals(left, right);
 
-    public static bool operator !=(Instruction left, Instruction right)
-    {
-        return !Equals(left, right);
-    }
+    public static bool operator !=(Instruction left, Instruction right) => !Equals(left, right);
 
     public long Execute()
     {
