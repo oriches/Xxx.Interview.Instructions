@@ -9,8 +9,5 @@ public sealed class MultipleOperator : Operator
     {
     }
 
-    public override long Execute(params Func<long>[] operands)
-    {
-        return operands.Aggregate(1L, (a, b) => a * b());
-    }
+    public override long Execute(params Func<long>[] operands) => operands.Aggregate(1L, (a, b) => a * b());
 }

@@ -10,15 +10,9 @@ public sealed class ConsoleLogger : ILogger
 
     private ConsoleLogger() => _messages = new List<string>();
 
-    public void Info()
-    {
-        _messages.Add(null);
-    }
+    public void Info() => _messages.Add(null);
 
-    public void Info(string message)
-    {
-        _messages.Add(message);
-    }
+    public void Info(string message) => _messages.Add(message);
 
     public void Flush()
     {

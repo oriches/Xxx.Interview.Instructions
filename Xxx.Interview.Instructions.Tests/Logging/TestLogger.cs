@@ -9,15 +9,9 @@ public sealed class TestLogger : ILogger
 
     public List<string> Results { get; }
 
-    public void Info()
-    {
-        Results.Add(string.Empty);
-    }
+    public void Info() => Results.Add(string.Empty);
 
-    public void Info(string message)
-    {
-        Results.Add(message);
-    }
+    public void Info(string message) => Results.Add(message);
 
     public void Flush()
     {

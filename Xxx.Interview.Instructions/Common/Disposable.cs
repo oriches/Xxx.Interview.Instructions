@@ -10,10 +10,7 @@ public sealed class Disposable : IDisposable
 
     private Disposable(Action action) => _action = action;
 
-    public void Dispose()
-    {
-        _action?.Invoke();
-    }
+    public void Dispose() => _action?.Invoke();
 
     public static IDisposable Create(Action action) => new Disposable(action);
 }

@@ -9,8 +9,5 @@ public sealed class AddOperator : Operator
     {
     }
 
-    public override long Execute(params Func<long>[] operands)
-    {
-        return operands.Sum(op => op());
-    }
+    public override long Execute(params Func<long>[] operands) => operands.Sum(op => op());
 }
