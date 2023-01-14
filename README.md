@@ -8,7 +8,7 @@ What is this?
 
 This is the solution to an interview coding test I wrote for a contract I never applied for - a friend & I were talking about it and I thought I'd give it ago!
 
-Included below is a screenshot of my results followed by the instructions, but the major thing to note is I built this in .Net 5.0 not .Net 4.6.1 or less - so i guess I failed already :)
+Included below is a screenshot of my results followed by the instructions, but the major thing to note is I built this in .Net ~~5.0 7.0 not .Net 4.6.1 or less - so i guess I failed already :)
 
 ![alt text](https://github.com/oriches/Xxx.Interview.Instructions/blob/main/answer.png "Answer = 85ms")
 
